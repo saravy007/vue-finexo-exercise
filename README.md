@@ -31,3 +31,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 "# vue-finexo-exercise" 
 "# vue-finexo-exercise" 
 "# vue-finexo-exercise" 
+"# vue-finexo-exercise" 
