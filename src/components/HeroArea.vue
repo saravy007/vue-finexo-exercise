@@ -17,15 +17,15 @@
                     <div class="detail-box">
                         <h1>
                         Crypto <br>
-                        Currency
+                        Currency {{count}}
                         </h1>
                         <p>
                         Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
                         </p>
                         <div class="btn-box">
-                        <a href="" class="btn1">
+                        <button @click="increment" class="btn1">
                             Read More
-                        </a>
+                        </button>
                         </div>
                     </div>
                     </div>
@@ -103,3 +103,16 @@
         <!-- end slider section -->
     </div>
 </template>
+
+<script>
+import { useCounterStore } from '@/store/counter'
+import { mapState, mapActions } from 'pinia'
+export default {
+  computed:{
+    ...mapState(useCounterStore, ['count']),
+  },
+  methods:{
+    ...mapActions(useCounterStore, ['increment','decrement']),
+  }
+}
+</script>

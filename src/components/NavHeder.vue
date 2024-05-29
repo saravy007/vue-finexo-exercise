@@ -6,6 +6,7 @@
         <router-link class="navbar-brand" to="/">
           <span>
             Finexo
+            {{count}}
           </span>
         </router-link>
         <!-- </a> -->
@@ -36,8 +37,15 @@
               <!-- <a class="nav-link" href="team.html">Team</a> -->
               <router-link class="nav-link" to="/team">Team</router-link>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+            <li class="nav-item" :class="{ active: $route.path == '/user' }">
+              <!-- <a class="nav-link" href="team.html">Team</a> -->
+              <router-link class="nav-link" to="/user">Users</router-link>
+            </li>
+            <li class="nav-item" :class="{ active: $route.path == '/login' }">
+              <router-link class="nav-link" to="/login"> Login</router-link>
+            </li>
+            <li class="nav-item" :class="{ active: $route.path == '/register' }">
+              <router-link class="nav-link" to="/register"> Register</router-link>
             </li>
             <form class="form-inline">
               <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
@@ -50,6 +58,19 @@
     </div>
   </header>
 </template>
+
+<script>
+import { useCounterStore } from '@/store/counter'
+import { mapState, mapActions } from 'pinia'
+export default {
+  computed:{
+    ...mapState(useCounterStore, ['count']),
+  },
+  methods:{
+    ...mapActions(useCounterStore, ['increment','decrement']),
+  }
+}
+</script>
 
 <style scope>
   .bg{

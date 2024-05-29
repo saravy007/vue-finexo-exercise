@@ -8,11 +8,11 @@
             {{name}}
             </h5>
             <p>
-            {{position}}
+            {{email}}
             </p>
-            <div>
-                <slot name="quote"></slot>
-            </div>
+            <p>
+            {{job}}
+            </p>
         </div>
         <div class="social_box">
             <a href="#">
@@ -36,7 +36,7 @@
 <script>
 export default {
     props:[
-        'imgPath','name','position'
+        'imgPath','name','email','job'
     ]
 }
 </script>

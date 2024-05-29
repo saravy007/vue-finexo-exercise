@@ -81,8 +81,13 @@
             <h4>
                 Subscribe
             </h4>
-            <form action="#">
-                <input type="text" placeholder="Enter email" />
+            <form @submit.prevent="handleSubmit">
+                <input 
+                    type="email"
+                    required 
+                    placeholder="Enter email" 
+                    v-model="email"
+                />
                 <button type="submit">
                 Subscribe
                 </button>
@@ -103,3 +108,26 @@
     </section>
     <!-- footer section -->
 </template>
+
+<script>
+import axios from "axios"; 
+
+export default {
+    data(){
+        return{
+            email: ""
+        }        
+    },
+    methods:{
+        async handleSubmit(){
+            //console.log(this.email);
+            const {data} = await axios.post("http://172.23.128.253:3000/register",
+                {
+                    email: this.email,
+                }
+            );
+            console.log(data)
+        }
+    }
+}
+</script>
