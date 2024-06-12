@@ -10,6 +10,7 @@ import Users from '@/views/Users.vue'
 import Login from '@/views/Login.vue'
 import SingUp from '@/views/SingUp.vue'
 import NotFound from '@/views/NotFound.vue'
+//hello
 
 const routes = [
     { path: '/', component: Home },
