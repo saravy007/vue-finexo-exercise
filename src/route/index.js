@@ -9,6 +9,7 @@ import RegistrationForm from '@/views/RegistrationForm.vue'
 import Users from '@/views/Users.vue'
 import Login from '@/views/Login.vue'
 import SingUp from '@/views/SingUp.vue'
+import NotFound from '@/views/NotFound.vue'
 
 const routes = [
     { path: '/', component: Home },
@@ -19,7 +20,8 @@ const routes = [
     { path: '/register', component: RegistrationForm},
     { path: '/user', component: Users},
     { path: '/login', component: Login},
-    { path: '/sing-up', component: SingUp}
+    { path: '/sing-up', component: SingUp},
+    { path: '/:pathMatch(.*)*', component: NotFound}
 ]
 
 const router = createRouter({
