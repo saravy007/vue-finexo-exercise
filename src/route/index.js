@@ -1,15 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
 // Import your components
-import Home from '@/views/Home.vue'
-import About from '@/views/About.vue'
-import Service from '@/views/Service.vue'
-import WhyUs from '@/views/WhyUs.vue'
-import Team from '@/views/Team.vue'
-import RegistrationForm from '@/views/RegistrationForm.vue'
-import Users from '@/views/Users.vue'
-import Login from '@/views/Login.vue'
-import SingUp from '@/views/SingUp.vue'
-import NotFound from '@/views/NotFound.vue'
+//import Home from '@/views/Home.vue'
+const Home = () => import('@/views/Home.vue')
+// import About from '@/views/About.vue'
+const About = () => import('@/views/About.vue')
+// import Service from '@/views/Service.vue'
+const Service = () => import('@/views/Service.vue')
+// import WhyUs from '@/views/WhyUs.vue'
+const WhyUs = () => import('@/views/WhyUs.vue')
+// import Team from '@/views/Team.vue'
+const Team = () => import('@/views/Team.vue')
+// import RegistrationForm from '@/views/RegistrationForm.vue'
+const RegistrationForm = () => import('@/views/RegistrationForm.vue')
+// import Users from '@/views/Users.vue'
+const Users = () => import('@/views/Users.vue')
+// import Login from '@/views/Login.vue'
+const Login = () => import('@/views/Login.vue')
+// import SingUp from '@/views/SingUp.vue'
+const SingUp = () => import('@/views/SingUp.vue')
+// import NotFound from '@/views/NotFound.vue'
+const NotFound = () => import('@/views/NotFound.vue')
 //hello
 
 const routes = [
